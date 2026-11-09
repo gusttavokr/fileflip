@@ -1,0 +1,55 @@
+@startuml
+interface Arquivo {
+    +arquivo_id: string
+    +name: string
+    +tamanhoArquivo: number
+    +possuiFoto: boolean
+    +usuario_id: string
+    +url_download: string
+}
+interface CadastroUsuario {
+    +username: string
+    +email: string
+    +password: string
+    +confirmPassword: string
+}
+interface Conversao {
+    +mensagem: string
+    +urlDownload: string
+}
+interface ConversaoRequest {
+    +arquivo: File
+    +novoTipo: string
+}
+interface ConversaoResponse {
+    +arquivoId: string
+    +nomeArquivo: string
+    +tipoOriginal: string
+    +tipoConvertido: string
+    +urlDownload: string
+}
+interface Login {
+    +userId: string
+    +token: string
+    +email: string
+    +username: string
+}
+interface LoginUsuario {
+    +email: string
+    +password: string
+}
+interface Usuario {
+    +id: string
+    +username: string
+    +email: string
+    +googleVinculado: boolean
+    +googleName: string
+    +googlePictureUrl: string
+}
+interface Vincular {
+    +googleId: string
+    +googleName: string
+    +googlePictureUrl: string
+    +googleVinculado: boolean
+}
+@enduml
