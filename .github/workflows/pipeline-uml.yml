@@ -1,0 +1,49 @@
+name: PlantUML
+# Roda de novo aí pfv actions
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+
+jobs:
+  build-uml:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Instalar tplant
+        run: npm install -g tplant
+
+      - name: Instalar PlantUML e Graphviz
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y plantuml graphviz
+
+      - name: Gerar código PlantUML
+        run: |
+          mkdir -p docs
+          tplant --input 'frontend/fileflip/src/app/models/**/*.ts' --output 'docs/dominio.puml'
+
+      - name: Gerar imagem PNG
+        run: plantuml -tpng docs/dominio.puml
+
+      - name: Commit diagramas
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: ":books: docs: diagrama de classe UML update"
+          file_pattern: 'docs/*'
