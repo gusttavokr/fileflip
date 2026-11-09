@@ -36,12 +36,12 @@ jobs:
         run: |
           mkdir -p docs
 
-          tplant --input "frontend/fileflip/src/app/models/**.ts" --output "docs/dominio.puml"
+          tplant --input "frontend/fileflip/src/app/models/**/*.ts" --output "docs/dominio.puml"
         
       - name: Gerar imagem png
         uses: jassielof/setup-plantuml@v1
       - run: |
-          plantuml -tpng docs/classes.puml
+          plantuml -tpng docs/dominio.puml
       
       - name: Commitar alterações no repositório
         uses: stefanzweifel/git-auto-commit-action@v5
