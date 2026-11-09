@@ -2,14 +2,12 @@ name: PlantUML
 
 on:
   push:
-    branches: 
-      - main
+    branches: ["main"]
     paths:
       - 'frontend/fileflip/src/app/models/**'
 
   pull_request:
-    branches:
-      - main
+    branches: ["main"]
     paths:
       - 'frontend/fileflip/src/app/models/**'
 
