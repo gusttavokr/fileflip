@@ -4,10 +4,14 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'frontend/fileflip/src/app/models/**'
 
   pull_request:
     branches:
       - main
+    paths:
+      - 'frontend/fileflip/src/app/models/**'
 
 
 jobs:
@@ -29,15 +33,15 @@ jobs:
       - name: Instalar tplant
         run: npm install -g tplant
 
+      - name: Instalar PlantUML e Graphviz
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y plantuml graphviz
+
       - name: Gerar código PlantUML
         run: |
           mkdir -p docs
-          tplant --input "frontend/fileflip/src/app/models/**/*.ts" --output "docs/dominio.puml"
-
-      - name: Setup PlantUML
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y plantuml
+          tplant --input 'frontend/fileflip/src/app/models/**/*.ts' --output 'docs/dominio.puml'
 
       - name: Gerar imagem PNG
         run: plantuml -tpng docs/dominio.puml
