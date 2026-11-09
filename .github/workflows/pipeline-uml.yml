@@ -2,12 +2,14 @@ name: PlantUML
 
 on:
   push:
-    branches: ["main"]
+    branches: 
+      - main
     paths:
       - 'frontend/fileflip/src/app/models/**'
 
   pull_request:
-    branches: ["main"]
+    branches:
+      - main
     paths:
       - 'frontend/fileflip/src/app/models/**'
 
@@ -25,7 +27,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-size: '20'
+          node-version: '20' 
 
       - name: Instalar tplant
         run: npm install -g tplant
@@ -33,7 +35,6 @@ jobs:
       - name: Gerar código (.puml)
         run: |
           mkdir -p docs
-
           tplant --input "frontend/fileflip/src/app/models/**/*.ts" --output "docs/dominio.puml"
         
       - name: Gerar imagem png
@@ -41,7 +42,6 @@ jobs:
       - run: |
           plantuml -tpng docs/dominio.puml
       
-      - name: Commitar alterações no repositório
         uses: stefanzweifel/git-auto-commit-action@v5
         with: 
           commit_message: ":books: docs: diagrama de classe UML update"
