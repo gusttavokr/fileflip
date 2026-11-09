@@ -4,14 +4,11 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'frontend/fileflip/src/app/models/**'
 
   pull_request:
     branches:
       - main
-    paths:
-      - 'frontend/fileflip/src/app/models/**'
+
 
 jobs:
   build-uml:
