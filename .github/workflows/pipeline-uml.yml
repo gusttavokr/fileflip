@@ -35,7 +35,9 @@ jobs:
           tplant --input "frontend/fileflip/src/app/models/**/*.ts" --output "docs/dominio.puml"
 
       - name: Setup PlantUML
-        uses: jassielof/setup-plantuml@v1
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y plantuml
 
       - name: Gerar imagem PNG
         run: plantuml -tpng docs/dominio.puml
