@@ -1,4 +1,4 @@
-package com.fileflip.arquivo_service;
+package com.fileflip.arquivo_service.models;
 
 import jakarta.persistence.*;
 import lombok.Data;

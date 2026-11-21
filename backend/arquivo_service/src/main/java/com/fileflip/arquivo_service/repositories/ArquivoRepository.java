@@ -1,4 +1,6 @@
-package com.fileflip.arquivo_service;
+package com.fileflip.arquivo_service.repositories;
+import com.fileflip.arquivo_service.models.Arquivo;
+
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

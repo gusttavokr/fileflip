@@ -1,6 +1,6 @@
 package com.fileflip.arquivo_service.DTOs;
 
-import com.fileflip.arquivo_service.ArquivoType;
+import com.fileflip.arquivo_service.models.ArquivoType;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

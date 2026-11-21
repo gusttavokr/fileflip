@@ -1,7 +1,9 @@
-package com.fileflip.arquivo_service;
+package com.fileflip.arquivo_service.service;
 
 import com.fileflip.arquivo_service.DTOs.ArquivoResponse;
 import org.springframework.stereotype.Component;
+import com.fileflip.arquivo_service.models.Arquivo;
+import com.fileflip.arquivo_service.models.ArquivoType;
 
 import java.util.UUID;
 

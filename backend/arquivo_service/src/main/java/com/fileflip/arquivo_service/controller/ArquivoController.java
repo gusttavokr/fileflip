@@ -1,9 +1,11 @@
-package com.fileflip.arquivo_service;
+package com.fileflip.arquivo_service.controller;
 
 import com.fileflip.arquivo_service.DTOs.ArquivoResponse;
 import com.fileflip.arquivo_service.DTOs.ConversaoRequest;
 import com.fileflip.arquivo_service.DTOs.ConversaoResponse;
 import com.fileflip.arquivo_service.DTOs.ErrorResponse;
+import com.fileflip.arquivo_service.service.ArquivoService;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

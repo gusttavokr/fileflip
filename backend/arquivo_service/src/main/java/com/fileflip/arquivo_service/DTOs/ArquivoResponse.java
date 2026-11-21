@@ -1,6 +1,6 @@
 package com.fileflip.arquivo_service.DTOs;
 
-import com.fileflip.arquivo_service.ArquivoType;
+import com.fileflip.arquivo_service.models.ArquivoType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
