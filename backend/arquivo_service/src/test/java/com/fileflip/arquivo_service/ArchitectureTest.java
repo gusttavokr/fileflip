@@ -38,6 +38,11 @@ public class ArchitectureTest {
                     .or().haveSimpleName("ArquivoType")
                     .should().resideInAPackage("..model..");
 
+    @ArchTest
+    static final ArchRule configs_devem_estar_no_pacote_config =
+            classes().that().haveSimpleNameEndingWith("Config")
+                    .should().resideInAPackage("..config..");
+
     // 2. Garante a hierarquia de dependências entre as camadas
     @ArchTest
     static final ArchRule dependencias_entre_camadas_devem_ser_respeitadas =
