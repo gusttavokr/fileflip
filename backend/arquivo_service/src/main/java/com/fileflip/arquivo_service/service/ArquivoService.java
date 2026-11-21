@@ -1,8 +1,12 @@
-package com.fileflip.arquivo_service;
+package com.fileflip.arquivo_service.service;
 
 import com.fileflip.arquivo_service.DTOs.ArquivoResponse;
 import com.fileflip.arquivo_service.DTOs.ConversaoRequest;
 import com.fileflip.arquivo_service.DTOs.ConversaoResponse;
+import com.fileflip.arquivo_service.model.Arquivo;
+import com.fileflip.arquivo_service.model.ArquivoType;
+import com.fileflip.arquivo_service.repository.ArquivoRepository;
+
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;

@@ -1,6 +1,5 @@
 package com.fileflip.arquivo_service.DTOs;
 
-import com.fileflip.arquivo_service.ArquivoType;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
@@ -8,7 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.util.UUID;
+import com.fileflip.arquivo_service.model.ArquivoType;
 
 @Data
 @NoArgsConstructor

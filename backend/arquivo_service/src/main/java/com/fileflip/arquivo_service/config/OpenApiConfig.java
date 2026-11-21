@@ -1,4 +1,4 @@
-package com.fileflip.arquivo_service;
+package com.fileflip.arquivo_service.config;
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.enums.SecuritySchemeType;
