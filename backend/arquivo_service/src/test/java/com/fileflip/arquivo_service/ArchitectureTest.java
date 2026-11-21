@@ -52,6 +52,7 @@ public class ArchitectureTest {
                     .optionalLayer("Service").definedBy("..service..")
                     .optionalLayer("Repository").definedBy("..repository..")
                     .optionalLayer("Model").definedBy("..model..")
+                    .optionalLayer("DTO").definedBy("..DTOs..")
 
                     .whereLayer("Controller").mayNotBeAccessedByAnyLayer()
                     .whereLayer("Service").mayOnlyBeAccessedByLayers("Controller")
