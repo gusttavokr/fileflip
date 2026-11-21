@@ -1,11 +1,11 @@
 package com.fileflip.arquivo_service.service;
 
-import com.fileflip.arquivo_service.models.Arquivo;
-import com.fileflip.arquivo_service.models.ArquivoType;
 import com.fileflip.arquivo_service.DTOs.ArquivoResponse;
 import com.fileflip.arquivo_service.DTOs.ConversaoRequest;
 import com.fileflip.arquivo_service.DTOs.ConversaoResponse;
-import com.fileflip.arquivo_service.repositories.ArquivoRepository;
+import com.fileflip.arquivo_service.model.Arquivo;
+import com.fileflip.arquivo_service.model.ArquivoType;
+import com.fileflip.arquivo_service.repository.ArquivoRepository;
 
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Value;

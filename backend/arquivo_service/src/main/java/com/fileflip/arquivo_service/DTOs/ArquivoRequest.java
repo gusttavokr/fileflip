@@ -1,6 +1,5 @@
 package com.fileflip.arquivo_service.DTOs;
 
-import com.fileflip.arquivo_service.models.ArquivoType;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -10,6 +9,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.UUID;
+
+import com.fileflip.arquivo_service.model.ArquivoType;
 
 @Data
 @NoArgsConstructor

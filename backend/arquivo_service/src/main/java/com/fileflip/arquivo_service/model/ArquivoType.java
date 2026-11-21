@@ -1,4 +1,4 @@
-package com.fileflip.arquivo_service.models;
+package com.fileflip.arquivo_service.model;
 
 public enum ArquivoType {
     PDF("Pdf"),
