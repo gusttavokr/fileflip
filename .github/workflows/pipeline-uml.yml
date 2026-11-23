@@ -1,5 +1,6 @@
+
 name: PlantUML
-# Roda de novo aí pfv actions
+
 on:
   push:
     branches:
@@ -9,13 +10,12 @@ on:
     branches:
       - main
 
-
 jobs:
   build-uml:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write
+      contents: read
 
     steps:
       - name: Checkout repository
@@ -42,8 +42,10 @@ jobs:
       - name: Gerar imagem PNG
         run: plantuml -tpng docs/dominio.puml
 
-      - name: Commit diagramas
-        uses: stefanzweifel/git-auto-commit-action@v5
+      - name: Disponibilizar diagramas para download
+        uses: actions/upload-artifact@v4
         with:
-          commit_message: ":books: docs: diagrama de classe UML update"
-          file_pattern: 'docs/*'
+          name: diagramas-uml
+          path: docs/
+          retention-days: 30
+          if-no-files-found: error
