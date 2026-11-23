@@ -46,6 +46,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: diagramas-uml
-          path: docs/
+          path: |
+            docs/dominio.png
+            docs/dominio.puml
           retention-days: 30
           if-no-files-found: error
